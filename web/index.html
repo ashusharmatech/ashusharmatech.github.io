@@ -1,0 +1,267 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <title>Financial Information - Dashboard</title>
+
+    <!-- Custom fonts for this template-->
+    <link href="vendor/fontawesome-free/css/all.min.css" rel="stylesheet" type="text/css">
+    <link href="https://fonts.googleapis.com/css?family=Nunito:200,200i,300,300i,400,400i,600,600i,700,700i,800,800i,900,900i"
+          rel="stylesheet">
+
+    <!-- Custom styles for this template-->
+    <link href="css/sb-admin-2.min.css" rel="stylesheet">
+
+</head>
+
+<body id="page-top">
+
+<!-- Page Wrapper -->
+<div id="wrapper">
+
+    <!-- Sidebar -->
+    <ul class="navbar-nav bg-gradient-primary sidebar sidebar-dark accordion" id="accordionSidebar">
+
+        <!-- Sidebar - Brand -->
+        <a class="sidebar-brand d-flex align-items-center justify-content-center" href="index.html">
+            <div class="sidebar-brand-icon rotate-n-15">
+                <i class="fas fa-laugh-wink"></i>
+            </div>
+            <div class="sidebar-brand-text mx-3">Financial Information</div>
+        </a>
+
+        <!-- Divider -->
+        <hr class="sidebar-divider my-0">
+
+        <!-- Nav Item - Dashboard -->
+        <li class="nav-item active">
+            <a class="nav-link" href="index.html">
+                <i class="fas fa-fw fa-tachometer-alt"></i>
+                <span>Dashboard</span></a>
+        </li>
+
+        <!-- Divider -->
+        <hr class="sidebar-divider">
+
+        <!-- Sidebar Toggler (Sidebar) -->
+        <div class="text-center d-none d-md-inline">
+            <button class="rounded-circle border-0" id="sidebarToggle"></button>
+        </div>
+
+    </ul>
+    <!-- End of Sidebar -->
+
+    <!-- Content Wrapper -->
+    <div id="content-wrapper" class="d-flex flex-column">
+
+        <!-- Main Content -->
+        <div id="content">
+
+            <!-- Topbar -->
+            <nav class="navbar navbar-expand navbar-light bg-white topbar mb-4 static-top shadow">
+
+                <!-- Sidebar Toggle (Topbar) -->
+                <button id="sidebarToggleTop" class="btn btn-link d-md-none rounded-circle mr-3">
+                    <i class="fa fa-bars"></i>
+                </button>
+            </nav>
+            <!-- End of Topbar -->
+
+            <!-- Begin Page Content -->
+            <div class="container-fluid">
+
+                <!-- Page Heading -->
+                <div class="d-sm-flex align-items-center justify-content-between mb-4">
+                    <h1 class="h3 mb-0 text-gray-800">Old Vs New Tax System:</h1>
+                </div>
+                <!-- Content Row -->
+                <form>
+                    <div class="row">
+                        <div class="col-xl-6 col-lg-6">
+                            <div class="form-group">
+                                <label for="grossIncome">Gross Income</label>
+                                <input type="number" class="form-control" id="txtGrossIncome" value="500000">
+                            </div>
+                            <div class="form-group">
+                                <label for="standardDeduction">Standard Deduction</label>
+                                <input type="number" class="form-control" id="txtStandardDeduction" value="50000">
+                            </div>
+                            <div class="form-group">
+                                <label for="hraExemption">HRA Exemption</label>
+                                <input type="number" class="form-control" id="txtHraExemption" value="0">
+                            </div>
+
+                            <div class="form-group">
+                                <label for="lossHouseProperty">Loss from House Property</label>
+                                <input type="number" class="form-control" id="txtLossHouseProperty" value="0">
+                            </div>
+                            <div class="form-group">
+                                <label for="grossTotalIncome">Gross Total Income</label>
+                                <input type="number" disabled class="form-control" id="txtGrossTotalIncome" value="0">
+                            </div>
+                            <div class="form-group">
+                                <label for="80c">Deductions under Sec. 80C</label>
+                                <input type="number" class="form-control" id="txt80c" value="0">
+                            </div>
+                            <div class="form-group">
+                                <label for="80d">Deductions under Sec. 80D</label>
+                                <input type="number" class="form-control" id="txt80D" value="0">
+                            </div>
+                            <div class="form-group">
+                                <label for="netTaxableIncome">Net Taxable Income</label>
+                                <input type="number" disabled class="form-control" id="txtNetTaxableIncome" value="0">
+                            </div>
+                        </div>
+                        <div class="col-xl-6 col-lg-6">
+                            <div class="form-group">
+                                <label for="oldTax">Old Tax</label>
+                                <input type="number" disabled class="form-control" id="txtOldTax" value="0">
+                            </div>
+                            <div class="form-group">
+                                <label for="newTax">New Tax</label>
+                                <input type="number" disabled class="form-control" id="txtNewTax" value="0">
+                            </div>
+                            <div class="form-group">
+                                <label for="taxDiff">Gain/Loss under New Tax</label>
+                                <input type="number" disabled class="form-control" id="txtTaxDiff" value="0">
+                            </div>
+                            <div class="form-group">
+                                <label id="lblMsg"></label>
+                            </div>
+                        </div>
+                    </div>
+                </form>
+            </div>
+            <!-- /.container-fluid -->
+
+        </div>
+        <!-- End of Main Content -->
+
+        <!-- Footer -->
+        <footer class="sticky-footer bg-white">
+            <div class="container my-auto">
+                <div class="copyright text-center my-auto">
+                    <span>Copyright &copy; Ashutosh Website 2019</span>
+                </div>
+            </div>
+        </footer>
+        <!-- End of Footer -->
+
+    </div>
+    <!-- End of Content Wrapper -->
+
+</div>
+<!-- End of Page Wrapper -->
+
+<!-- Scroll to Top Button-->
+<a class="scroll-to-top rounded" href="#page-top">
+    <i class="fas fa-angle-up"></i>
+</a>
+
+
+<!-- Bootstrap core JavaScript-->
+<script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+<script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+
+<!-- Core plugin JavaScript-->
+<script src="vendor/jquery-easing/jquery.easing.min.js"></script>
+
+<!-- Custom scripts for all pages-->
+<script src="js/sb-admin-2.min.js"></script>
+
+
+<script>
+
+
+    $(document).ready(function () {
+        $("input").change(function () {
+
+            var grossIncome = $("#txtGrossIncome");
+            var standardDeduction = $("#txtStandardDeduction");
+            var hraExemption = $("#txtHraExemption");
+            var lossHouseProperty = $("#txtLossHouseProperty");
+            var grossTotalIncome = $("#txtGrossTotalIncome");
+
+            var _80C = $("#txt80c");
+            var _80D = $("#txt80D");
+            var netTaxableIncome = $("#txtNetTaxableIncome");
+            var grossIncome = $("#txtGrossIncome");
+            var taxDiff = $("#txtTaxDiff");
+
+            var newTax = $("#txtNewTax");
+            var oldTax = $("#txtOldTax");
+
+
+            var deductions = parseInt(standardDeduction.val()) + parseInt(hraExemption.val()) + parseInt(lossHouseProperty.val());
+            grossTotalIncome.val(grossIncome.val() - deductions);
+            var investment = parseInt(_80C.val()) + parseInt(_80D.val());
+            netTaxableIncome.val(grossTotalIncome.val() - investment);
+
+
+            var newTaxValue = 0;
+            var oldTaxValue = 0;
+
+            var netTaxableIncomeIntValue = parseInt(netTaxableIncome.val());
+
+
+            if (netTaxableIncomeIntValue <= 500000) {
+                console.log("1");
+                oldTaxValue = 0;
+            } else if (netTaxableIncomeIntValue > 500000 && netTaxableIncomeIntValue <= 750000) {
+                console.log("2");
+                oldTaxValue = 12500 + (netTaxableIncomeIntValue - 500000) * 0.2;
+            } else if (netTaxableIncomeIntValue > 750000 && netTaxableIncomeIntValue <= 1000000) {
+                console.log("3");
+                oldTaxValue = 62500 + (netTaxableIncomeIntValue - 750000) * 0.2;
+            } else {
+                console.log("4");
+                oldTaxValue = 112500 + (netTaxableIncomeIntValue - 1000000) * 0.3;
+            }
+
+            var grossIncomeIntValue = parseInt(grossIncome.val());
+
+            if (grossIncomeIntValue <= 500000) {
+                console.log("1");
+                newTaxValue = 0;
+            } else if (grossIncomeIntValue > 500000 && grossIncomeIntValue <= 750000) {
+                console.log("2");
+                newTaxValue = 12500 + (grossIncomeIntValue - 500000) * 0.1;
+            } else if (grossIncomeIntValue > 750000 && grossIncomeIntValue <= 1000000) {
+                console.log("3");
+                newTaxValue = 37500 + (grossIncomeIntValue - 750000) * 0.15;
+            } else if (grossIncomeIntValue > 1000000 && grossIncomeIntValue <= 1250000) {
+                console.log("4");
+                newTaxValue = 75000 + (grossIncomeIntValue - 1000000) * 0.2;
+            } else if (grossIncomeIntValue > 1250000 && grossIncomeIntValue <= 1500000) {
+                console.log("5");
+                newTaxValue = 125000 + (grossIncomeIntValue - 1250000) * 0.25;
+            } else {
+                console.log("6");
+                newTaxValue = 187000 + (grossIncomeIntValue - 1500000) * 0.3;
+            }
+            newTax.val(newTaxValue * 1.04);
+            oldTax.val(oldTaxValue * 1.04);
+
+            var taxDiffValue = oldTaxValue - newTaxValue;
+            taxDiff.val(taxDiffValue);
+
+            if (taxDiffValue == 0) {
+                $('#lblMsg').html("Choose anything all same for you !");
+            } else if (taxDiffValue > 0) {
+                $('#lblMsg').html("Choose new tax system, you will save " + Math.abs(taxDiffValue) + " rupees! ");
+            } else {
+                $('#lblMsg').html("Choose old tax system, you will save " + Math.abs(taxDiffValue) + " rupees! ");
+            }
+
+        });
+    });
+</script>
+</body>
+</html>
